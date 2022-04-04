@@ -5,6 +5,69 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+.image {
+            -webkit-box-shadow:  0px 0px 2px 4px rgba(0, 0, 0, 0.1);
+                    box-shadow:  0px 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .image h2 {
+            font-size: 16px;
+        }
+        .image img {
+            min-height:230px;
+            max-height:230px;
+            border-left:10px solid white;
+            border-right:10px solid white;
+            border-top:10px solid white;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+        
+        .zoom-on-hover {
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+        }
+        .zoom-on-hover:hover {
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+.caption {
+            color:#999999;
+            background: white;
+            font-style:italic;
+        }
+        .caption h2 {
+            font-size:20px;
+        }.image {
+            z-index: 2;
+            position: relative;
+            overflow: hidden;
+        }
+        .image img {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .image h2 {
+            margin: 0;
+        }
+        
+        /* Caption */
+        .caption {
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            display: block;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+
 .antartica {
   padding-right: 100px;
   border-radius: 75px;  
