@@ -5,6 +5,10 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+.antartica {
+  border-radius: 75px;  
+}
+
 /** HEADER **/
 #header-nav {
   background-color: #f6b319;
