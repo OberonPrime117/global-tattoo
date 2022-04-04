@@ -4,13 +4,23 @@ body {
   background-color: rgb(240, 230, 230);
   font-family: 'Oxygen', sans-serif;
 }
-
 .antartica {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: white;
   border-radius: 25px;
   border: 16px solid white;
-  padding: 20px; 
+  padding: 20px;
+}
 
-  background-color: white;
+.antar {
+  text-align: center;
+}
+
+.antartica img {
+ width: 100px;
+ height: 100px;
 }
 
 /** HEADER **/
