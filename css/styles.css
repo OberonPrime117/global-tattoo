@@ -6,22 +6,14 @@ body {
 }
 .antartica {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   background-color: white;
   border-radius: 25px;
   border: 16px solid white;
   padding: 20px;
 }
 
-.antar {
-  text-align: center;
-}
-
-.antartica img {
- width: 200px;
- height: 200px;
-}
 
 /** HEADER **/
 #header-nav {
