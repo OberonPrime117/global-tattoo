@@ -5,6 +5,15 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+.antartica {
+  border-radius: 25px;
+  border: 16px solid white;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+  background-color: white;
+}
+
 /** HEADER **/
 #header-nav {
   background-color: #f6b319;
