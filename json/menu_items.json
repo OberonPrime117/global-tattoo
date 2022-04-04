@@ -1,0 +1,16 @@
+{
+  "menu_items": [
+    {
+      "id": 877,
+      "short_name": "A1",
+      "name": "Hand Armitage Tattoo",
+      "price": 2.55
+    },
+    {
+        "id": 878,
+        "short_name": "A2",
+        "name": "Hand Story Tattoo",
+        "price": 2.55
+    }
+  ]
+}
