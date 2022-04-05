@@ -19,7 +19,7 @@ var allCategoriesUrl =
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
-  "https://oberonprime117.github.io/json/menu_items.json?category=";
+  "https://oberonprime117.github.io/json/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 var categoryName;
@@ -157,7 +157,7 @@ dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   categoryName = categoryShort;
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl+categoryShort,
+    categoryShort+".json",
     buildAndShowMenuItemsHTML);
 };
 
