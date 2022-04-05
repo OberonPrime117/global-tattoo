@@ -127,7 +127,7 @@ dc.loadMenuCategories = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     allCategoriesUrl,
-    buildAndShowCategoriesHTML
+    buildCategoriesViewHtml
     );
 };
 
