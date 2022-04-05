@@ -266,9 +266,9 @@ function buildMenuItemsViewHtml(categoryMenuItems,
   var menuItems = categoryMenuItems.menu_items;
   var i=0;
   var catShortName = categoryMenuItems.category_name;
-  while(menuItems[i].category_name==categoryName) {
+  while(catShortName==categoryName) {
     // Insert menu item values
-    i=i+1;
+    
     var html = menuItemHtml;
     html =
       insertProperty(html, "short_name", menuItems[i].short_name);
@@ -308,6 +308,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
     }
 
     finalHtml += html;
+    i=i+1;
   }
 
   finalHtml += "</section>";
