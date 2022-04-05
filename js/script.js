@@ -272,7 +272,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
     html =
       insertProperty(html,
                      "category_name",
-                     category_name);
+                     menuItems[i].category_name);
     html =
       insertItemPrice(html,
                       "price_small",
