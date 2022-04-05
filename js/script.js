@@ -249,15 +249,15 @@ function buildMenuItemsViewHtml(categoryMenuItems,
                                 menuItemsTitleHtml,
                                 menuItemHtml) {
 
-  menuItemsTitleHtml =
+  /*menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
-                   categoryMenuItems.category.name);
-  menuItemsTitleHtml =
+                   categoryMenuItems.category.name);*/
+ /* menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "special_instructions",
                    categoryMenuItems.category.special_instructions);
-
+*/
   var finalHtml = menuItemsTitleHtml;
   finalHtml += "<section class='row'>";
 
