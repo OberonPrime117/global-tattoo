@@ -17,7 +17,7 @@ var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
   "https://oberonprime117.github.io/json/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
-//var categoryHtml = "snippets/category-snippet.html";
+var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
   "https://oberonprime117.github.io/json/menu_items.json?category=";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
@@ -63,6 +63,23 @@ var switchMenuToActive = function () {
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
 
+// TODO: STEP 0: Look over the code from
+// *** start ***
+// to
+// *** finish ***
+// below.
+// We changed this code to retrieve all categories from the server instead of
+// simply requesting home HTML snippet. We now also have another function
+// called buildAndShowHomeHTML that will receive all the categories from the server
+// and process them: choose random category, retrieve home HTML snippet, insert that
+// random category into the home HTML snippet, and then insert that snippet into our
+// main page (index.html).
+//
+// TODO: STEP 1: Substitute [...] below with the *value* of the function buildAndShowHomeHTML,
+// so it can be called when server responds with the categories data.
+
+// *** start ***
+// On first load, show home view
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
@@ -81,7 +98,10 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtml) {
 
-
+      // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
+      // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
+      // variable's name implies it expects.
+      // var chosenCategoryShortName = ....
       var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
 
 
@@ -127,8 +147,7 @@ dc.loadMenuCategories = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     allCategoriesUrl,
-    buildCategoriesViewHtml
-    );
+    buildAndShowCategoriesHTML);
 };
 
 
@@ -151,15 +170,15 @@ function buildAndShowCategoriesHTML (categories) {
     function (categoriesTitleHtml) {
       // Retrieve single category snippet
       $ajaxUtils.sendGetRequest(
-        homeHtmlUrl,
-        function (homeHtmlUrl) {
+        categoryHtml,
+        function (categoryHtml) {
           // Switch CSS class active to menu button
           switchMenuToActive();
 
           var categoriesViewHtml =
             buildCategoriesViewHtml(categories,
                                     categoriesTitleHtml,
-                                    homeHtmlUrl);
+                                    categoryHtml);
           insertHtml("#main-content", categoriesViewHtml);
         },
         false);
@@ -172,7 +191,7 @@ function buildAndShowCategoriesHTML (categories) {
 // build categories view HTML to be inserted into page
 function buildCategoriesViewHtml(categories,
                                  categoriesTitleHtml,
-                                 homeHtmlUrl) {
+                                 categoryHtml) {
 
   var finalHtml = categoriesTitleHtml;
   finalHtml += "<section class='row'>";
@@ -180,7 +199,7 @@ function buildCategoriesViewHtml(categories,
   // Loop over categories
   for (var i = 0; i < categories.length; i++) {
     // Insert category values
-    var html = homeHtmlUrl;
+    var html = categoryHtml;
     var name = "" + categories[i].name;
     var short_name = categories[i].short_name;
     html =
