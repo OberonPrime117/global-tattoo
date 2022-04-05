@@ -263,9 +263,9 @@ function buildMenuItemsViewHtml(categoryMenuItems,
   finalHtml += "<section class='row'>";
 
   // Loop over menu items
-  var menuItems = categoryMenuItems.menu_items.categoryName;
- 
-  for (var i = 0; i < menuItems.length; i++) {
+  var menuItems = categoryMenuItems.menu_items;
+  var catShortName = categoryMenuItems.category_name;
+  while(catShortName==categoryName) {
     // Insert menu item values
     var html = menuItemHtml;
     html =
