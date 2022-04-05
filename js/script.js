@@ -15,11 +15,11 @@ var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
-  "https://oberonprime117.github.io/json/categories.json";
+  "https://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
-
+var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
-  "https://oberonprime117.github.io/json/menu_items.json?category=";
+  "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
@@ -170,15 +170,15 @@ function buildAndShowCategoriesHTML (categories) {
     function (categoriesTitleHtml) {
       // Retrieve single category snippet
       $ajaxUtils.sendGetRequest(
-        homeHtmlUrl,
-        function (homeHtmlUrl) {
+        categoryHtml,
+        function (categoryHtml) {
           // Switch CSS class active to menu button
           switchMenuToActive();
 
           var categoriesViewHtml =
             buildCategoriesViewHtml(categories,
                                     categoriesTitleHtml,
-                                    homeHtmlUrl);
+                                    categoryHtml);
           insertHtml("#main-content", categoriesViewHtml);
         },
         false);
@@ -191,7 +191,7 @@ function buildAndShowCategoriesHTML (categories) {
 // build categories view HTML to be inserted into page
 function buildCategoriesViewHtml(categories,
                                  categoriesTitleHtml,
-                                 homeHtmlUrl) {
+                                 categoryHtml) {
 
   var finalHtml = categoriesTitleHtml;
   finalHtml += "<section class='row'>";
@@ -199,7 +199,7 @@ function buildCategoriesViewHtml(categories,
   // Loop over categories
   for (var i = 0; i < categories.length; i++) {
     // Insert category values
-    var html = homeHtmlUrl;
+    var html = categoryHtml;
     var name = "" + categories[i].name;
     var short_name = categories[i].short_name;
     html =
