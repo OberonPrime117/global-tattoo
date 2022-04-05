@@ -19,7 +19,7 @@ var allCategoriesUrl =
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
-  "https://oberonprime117.github.io/json/menu_items.json?category=";
+  "https://oberonprime117.github.io/json/menu_items.json";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
@@ -249,10 +249,10 @@ function buildMenuItemsViewHtml(categoryMenuItems,
                                 menuItemsTitleHtml,
                                 menuItemHtml) {
 
-  /*menuItemsTitleHtml =
+  menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
-                   categoryMenuItems.category.name);*/
+                   categoryMenuItems.category_name);
  /* menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "special_instructions",
