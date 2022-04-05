@@ -172,7 +172,7 @@ function buildAndShowCategoriesHTML (categories) {
 // build categories view HTML to be inserted into page
 function buildCategoriesViewHtml(categories,
                                  categoriesTitleHtml,
-                                 ) {
+                                 homeHtmlUrl) {
 
   var finalHtml = categoriesTitleHtml;
   finalHtml += "<section class='row'>";
