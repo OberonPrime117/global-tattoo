@@ -265,7 +265,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
   // Loop over menu items
   var menuItems = categoryMenuItems.menu_items;
   var catShortName = categoryMenuItems.category_name;
-  for (var i = 0; i < menuItems.length; i++) { while(catShortName==categoryName){
+  for (var i = 0; i < menuItems.length; i++) { while(menuItems[i].category_name==categoryName){
     // Insert menu item values
     var html = menuItemHtml;
     html =
