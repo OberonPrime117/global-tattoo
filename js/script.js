@@ -22,7 +22,7 @@ var menuItemsUrl =
   "https://oberonprime117.github.io/json/menu_items.json?category=";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
-
+var categoryName;
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);
@@ -155,6 +155,7 @@ dc.loadMenuCategories = function () {
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
+  categoryName = categoryShort;
   $ajaxUtils.sendGetRequest(
     menuItemsUrl+categoryShort,
     buildAndShowMenuItemsHTML);
@@ -272,7 +273,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
     html =
       insertProperty(html,
                      "category_name",
-                     menuItems[i].category_name);
+                     categoryName);
     html =
       insertItemPrice(html,
                       "price_small",
