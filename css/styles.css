@@ -6,7 +6,7 @@ body {
 }
 
 .image {
-            
+
         }
         .image h2 {
             font-size: 16px;
@@ -36,7 +36,7 @@ body {
         }
 .caption {
             
-            
+            background: white;
             font-style:italic;
         }
         .caption h2 {
