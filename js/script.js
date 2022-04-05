@@ -267,7 +267,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
   var catShortName = categoryMenuItems.category_name;
   for (var i = 0; i < menuItems.length; i++) {
     // Insert menu item values
-    if(categoryName==catShortName){
+    if(categoryName==menuItems[i].category_name){
       continue;
     }
     var html = menuItemHtml;
