@@ -157,7 +157,7 @@ dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   categoryName = categoryShort;
   $ajaxUtils.sendGetRequest(
-    categoryShort+".json",
+    menuItemsUrl+categoryShort+".json",
     buildAndShowMenuItemsHTML);
 };
 
@@ -264,7 +264,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
 
   // Loop over menu items
   var menuItems = categoryMenuItems.menu_items;
-  var catShortName = categoryMenuItems.category_name;
+  //var catShortName = categoryMenuItems.category_name;
   for (var i = 0; i < menuItems.length; i++) {
     // Insert menu item values
     
