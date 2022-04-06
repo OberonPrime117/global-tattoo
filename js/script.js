@@ -92,12 +92,15 @@ $ajaxUtils.sendGetRequest(
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
-
+  $ajaxUtils.sendGetRequest(
+    categoriesTitleHtml,
+    function (categoriesTitleHtml) {
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtmlUrl) {
-      var finalHtml = "<section class='row'>";
+      var finalHtml = categoriesTitleHtml;
+      finalHtml += "<section class='row'>";
 
   // Loop over categories
   for (var i = 0; i < categories.length; i++) {
@@ -117,7 +120,9 @@ function buildAndShowHomeHTML (categories) {
   finalHtml += "</section>";
   insertHtml("#main-content", finalHtml);
     },
-    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+    false); 
+  },
+  false);// False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
 
 
