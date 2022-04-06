@@ -3,22 +3,18 @@
     </div>
 
     <div id="home-tiles" class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="#" onclick="$dc.loadMenuCategories();"><div id="menu-tile"><span>menu</span></div></a>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="#" onclick="$dc.loadMenuItems({randomCategoryShortName});">
-          <div id="specials-tile"><span>specials</span></div>
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <p style="border-radius: 25px;
-      border: 10px solid #73AD21;
-      padding: 20px; 
-      width: 200px;
-      height: 150px;  ">
       
-    </p>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
+          <div style="padding-bottom: 20%;" class=" zoom-on-hover">
+            <div class="image">
+              <img  src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+              <div class="caption">
+                <h2>{{name}}</h2>
+              </div>
+            </div>
+        </a>
+      
       </div>
       
     </div><!-- End of #home-tiles -->
