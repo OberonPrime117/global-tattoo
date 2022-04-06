@@ -53,11 +53,11 @@ var switchMenuToActive = function () {
   document.querySelector("#navHomeButton").className = classes;
 
   // Add 'active' to menu button if not already there
-  classes = document.querySelector("#navMenuButton").className;
+  /*classes = document.querySelector("#navMenuButton").className;
   if (classes.indexOf("active") === -1) {
     classes += " active";
     document.querySelector("#navMenuButton").className = classes;
-  }
+  }*/
 };
 
 // On page load (before images or CSS)
@@ -100,7 +100,7 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtmlUrl) {
       var finalHtml = categoriesTitleHtml;
-      finalHtml += "<section class='row'>";
+  finalHtml += "<section class='row'>";
 
   // Loop over categories
   for (var i = 0; i < categories.length; i++) {
