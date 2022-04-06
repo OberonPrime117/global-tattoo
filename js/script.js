@@ -17,7 +17,7 @@ var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
   "https://oberonprime117.github.io/json/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
-var categoryHtml = "snippets/category-snippet.html";
+var categoryHtml = "snippets/home-snippet.html";
 var menuItemsUrl =
   "https://oberonprime117.github.io/json/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
