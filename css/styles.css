@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: rgb(240, 230, 230);
+  background-color: rgb(247, 240, 240);
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -79,7 +79,7 @@ body {
 
 /** HEADER **/
 #header-nav {
-  background-color: white;
+  background-color: rgb(247, 240, 240);
   border-radius: 0;
   border: 0;
 }
