@@ -17,7 +17,7 @@ var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
   "https://oberonprime117.github.io/json/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
-var categoryHtml = "snippets/home-snippet.html";
+var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl =
   "https://oberonprime117.github.io/json/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
@@ -96,50 +96,32 @@ function buildAndShowHomeHTML (categories) {
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
-    function (homeHtml) {
+    function (homeHtmlUrl) {
+      var finalHtml = "<section class='row'>";
 
-      // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
-      // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
-      // variable's name implies it expects.
-      // var chosenCategoryShortName = ....
-      var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+  // Loop over categories
+  for (var i = 0; i < categories.length; i++) {
+    // Insert category values
+    var html = categoryHtml;
+    var name = "" + categories[i].name;
+    var short_name = categories[i].short_name;
+    html =
+      insertProperty(html, "name", name);
+    html =
+      insertProperty(html,
+                     "short_name",
+                     short_name);
+    finalHtml += html;
+  }
 
-
-      // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
-      // chosen category from STEP 2. Use existing insertProperty function for that purpose.
-      // Look through this code for an example of how to do use the insertProperty function.
-      // WARNING! You are inserting something that will have to result in a valid Javascript
-      // syntax because the substitution of {{randomCategoryShortName}} becomes an argument
-      // being passed into the $dc.loadMenuItems function. Think about what that argument needs
-      // to look like. For example, a valid call would look something like this:
-      // $dc.loadMenuItems('L')
-      // Hint: you need to surround the chosen category short name with something before inserting
-      // it into the home html snippet.
-      //
-      // var homeHtmlToInsertIntoMainPage = ....
-      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
-
-
-      // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
-      // Use the existing insertHtml function for that purpose. Look through this code for an example
-      // of how to do that.
-      // ....
-      insertHtml('#main-content', homeHtmlToInsertIntoMainPage);
-
+  finalHtml += "</section>";
+  insertHtml("#main-content", finalHtml);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
 
 
-// Given array of category objects, returns a random category object.
-function chooseRandomCategory (categories) {
-  // Choose a random index into the array (from 0 inclusively until array length (exclusively))
-  var randomArrayIndex = Math.floor(Math.random() * categories.length);
 
-  // return category object with that randomArrayIndex
-  return categories[randomArrayIndex];
-}
 
 
 // Load the menu categories view
@@ -147,7 +129,7 @@ dc.loadMenuCategories = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     allCategoriesUrl,
-    buildAndShowCategoriesHTML);
+    buildAndShowHomeHTML);
 };
 
 // THIS IS THE LINE YOU EDITED
@@ -171,15 +153,15 @@ function buildAndShowCategoriesHTML (categories) {
     function (categoriesTitleHtml) {
       // Retrieve single category snippet
       $ajaxUtils.sendGetRequest(
-        homeHtmlUrl,
-        function (homeHtmlUrl) {
+        categoryHtml,
+        function (categoryHtml) {
           // Switch CSS class active to menu button
           switchMenuToActive();
 
           var categoriesViewHtml =
             buildCategoriesViewHtml(categories,
                                     categoriesTitleHtml,
-                                    homeHtmlUrl);
+                                    categoryHtml);
           insertHtml("#main-content", categoriesViewHtml);
         },
         false);
@@ -192,7 +174,7 @@ function buildAndShowCategoriesHTML (categories) {
 // build categories view HTML to be inserted into page
 function buildCategoriesViewHtml(categories,
                                  categoriesTitleHtml,
-                                 homeHtmlUrl) {
+                                 categoryHtml) {
 
   var finalHtml = categoriesTitleHtml;
   finalHtml += "<section class='row'>";
@@ -200,7 +182,7 @@ function buildCategoriesViewHtml(categories,
   // Loop over categories
   for (var i = 0; i < categories.length; i++) {
     // Insert category values
-    var html = homeHtmlUrl;
+    var html = categoryHtml;
     var name = "" + categories[i].name;
     var short_name = categories[i].short_name;
     html =
