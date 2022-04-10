@@ -422,7 +422,7 @@ h3.menu-item-title {
 @media (max-width: 479px) {
   /* Header */
   .navbar-brand h1 { /* Restaurant name */
-    padding-top: 5px;
+    padding-top: 10px;
     font-size: 6vw;
   }
   /* End Header */
