@@ -401,6 +401,7 @@ h3.menu-item-title {
     margin-top: 30px;
     background: url('../images/jumbotron_439.jpg') no-repeat;
     height: 302px;
+    width:318px;
     padding: 0;
   }
   #menu-tile, #specials-tile {
