@@ -305,7 +305,7 @@ h3.menu-item-title {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    background: url('../images/jumbotron.jpg') no-repeat;
+    background: url('../images/jumbotron2.jpg') no-repeat;
     height: 675px;
   }
 }
@@ -323,7 +323,7 @@ h3.menu-item-title {
 
   /* Home Page */
   .container .jumbotron {
-    background: url('../images/jumbotron.jpg') no-repeat;
+    background: url('../images/jumbotron2.jpg') no-repeat;
     height: 558px;
   }
   /* End Home Page */
@@ -333,7 +333,7 @@ h3.menu-item-title {
 @media (min-width: 768px) and (max-width: 991px) {
   /* Home Page */
   .container .jumbotron {
-    background: url('../images/jumbotron.jpg') no-repeat;
+    background: url('../images/jumbotron2.jpg') no-repeat;
     height: 432px;
   }
   /* End Home Page */
