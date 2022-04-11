@@ -9,6 +9,29 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <style>
+      .marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+    </style>
   </head>
 <body>
   <header>
@@ -40,7 +63,11 @@
   </header>
 
   <div id="main-content" class="container"></div>
-
+  <div>
+    <p class="marquee">
+      <span>Looking for Tattoo Artist to hire !! </span>
+    </p>
+  </div>
   <footer class="panel-footer">
     <div class="container">
       <div class="row">
