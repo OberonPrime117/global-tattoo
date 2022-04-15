@@ -21,6 +21,123 @@
 #nav-list a span {
   font-size: 1.8em;
 }
+
+/* General */
+/* html {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+} */
+
+/* body {
+  margin: 20px 0;
+  overflow: auto;
+ 
+  color: #fff;
+} */
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.p-menu1{
+   height: 100%;
+}
+
+
+
+
+/* Hamburger */
+.hamburger1 {
+  height: 45px;
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  z-index: 120;
+}
+
+.hamburger1 div {
+  background-color: rgb(61, 61, 61);
+  position: relative;
+  width: 40px;
+  height: 5px;
+  margin-top: 7px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#toggle1 {
+  display: none;
+}
+
+#toggle1:checked + .hamburger1 .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+
+#toggle1:checked + .hamburger1 .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
+}
+
+#toggle1:checked + .hamburger1 .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#toggle1:checked ~ .menu1 {
+  height: 340px;
+}
+
+
+/* Menu */
+.menu1 {
+  width: 100%;
+  background-color: #02173F;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: 1fr repeat(4, 0.5fr);
+  grid-row-gap: 25px;
+  padding: 0;
+  list-style: none;
+  clear: both;
+  width: auto;
+  text-align: center;
+  height: 0px;
+  overflow: hidden;
+  transition: height .4s ease;
+  z-index: 120;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu1 a:first-child {
+  margin-top: 40px;
+}
+
+.menu1 a:last-child {
+  margin-bottom: 40px;
+}
+
+.link1 {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  font: 700 20px 'Oswald', sans-serif;
+}
+
+.link1:hover {
+  background-color: #fff;
+  color: rgb(61, 61, 61);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
       </style>
   </head>
 <body>
@@ -40,31 +157,28 @@
             <h1 style="color: white;">Global Tattoo India</h1></div></a>
            
           </div>
-           
-          <div id="collapsable-nav" class="collapse navbar-collapse">
-            <ul id="nav-list" class="nav navbar-nav navbar-right">
-             <li id="navHomeButton" class="visible-xs active">
-               <a href="index.html">
-                 <span class="glyphicon glyphicon-home"></span> Home</a>
-             </li>
-             <li id="navMenuButton">
-               <a href="#" onclick="$dc.loadMenuCategories();">
-                 <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
-             </li>
-             <li>
-               <a href="#">
-                 <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
-             </li>
-             <li>
-               <a href="#">
-                 <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
-             </li>
-             <li id="phone" class="hidden-xs">
-               <a href="tel:410-602-5008">
-                 <span>410-602-5008</span></a><div>* We Deliver</div>
-             </li>
-           </ul><!-- #nav-list -->
-         </div><!-- .collapse .navbar-collapse -->
+          <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle1" type="checkbox" />
+            <label class="hamburger1" for="toggle1">
+              <div class="top"></div>
+              <div class="meat"></div>
+              <div class="bottom"></div>
+            </label>
+          
+            <nav class="menu1">
+              <a class="link1" href="">Our Models</a>
+              <a class="link1" href="">Specialties</a>
+              <a class="link1" href="">About</a>
+              <a class="link1" href="">Blog</a>
+              <a class="lin1 kbutton-nav" href="">Contact</a>
+            </nav>
+        </nav>
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="phone" class="hidden-xs">
+              <a href="tel:+917138336481">
+                <span>+91 71383 36481</span></a><div style="width: -20%;">We will provide an amazing tattoo experience worth your time</div>
+            </li>
+          </ul><!-- .collapse .navbar-collapse -->
       </div><!-- .container -->
     </nav><!-- #header-nav -->
   </header>
