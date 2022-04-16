@@ -14,6 +14,8 @@
       .dropdown {
         float: left;
         overflow: visible;
+        padding-right: 150px;
+        padding-top: 40px;
       }
       
       .dropdown .dropbtn {
@@ -28,15 +30,16 @@
       }
       
       .dropdown:hover .dropbtn {
-        background-color: red;
+        background-color: #222;
       }
       
       .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
+        background-color: #222;
+        color: white;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(195, 184, 184, 0.2);
         z-index: 1;
       }
       
@@ -50,7 +53,7 @@
       }
       
       .dropdown-content a:hover {
-        background-color: #ddd;
+        background-color: #222;
       }
       
       .dropdown:hover .dropdown-content {
@@ -77,15 +80,15 @@
           </div>
           
           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="glyphicon glyphicon-align-justify">
+            <li class="">
               <div class="dropdown">
-                <button class="dropbtn">Dropdown 
-                  <i class="fa fa-caret-down"></i>
+                <button class="dropbtn"> 
+                  <i class="glyphicon glyphicon-align-justify"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a href="index.html">Home</a>
+                  <a href="academy.html">Academy</a>
+                  
                 </div>
             </li>
             <li id="phone" class="hidden-xs">
