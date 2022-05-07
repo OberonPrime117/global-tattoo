@@ -132,7 +132,7 @@ transform: translate(-100%, 0);
             width: 100%;
             height: auto;
             
-            border-top-right-radius: 30px;
+            border-top-right-radius: 30%;
             border-top-left-radius: 30px;
         }
         .image h2 {
