@@ -22,7 +22,9 @@ body {
         .image img {
             min-height:280px;
             max-height:280px;
-            
+            border-left:10px solid white;
+            border-right:10px solid white;
+            border-top:10px solid white;
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
@@ -59,7 +61,8 @@ body {
             width: 100%;
             height: auto;
             
-            
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
         }
         .image h2 {
             margin: 0;
@@ -80,7 +83,7 @@ body {
 
 .antartica {
   padding-right: 100px;
-
+  border-radius: 75px;  
 }
 
 /** HEADER **/
