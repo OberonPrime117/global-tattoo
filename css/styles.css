@@ -15,9 +15,7 @@ body {
 }
 
 
-.image {
 
-        }
         .image h2 {
             font-size: 16px;
         }
@@ -63,8 +61,7 @@ body {
             width: 100%;
             height: auto;
             
-            border-top-right-radius: 30px;
-            border-top-left-radius: 30px;
+            
         }
         .image h2 {
             margin: 0;
@@ -79,8 +76,7 @@ body {
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
-            border-bottom-right-radius: 30px;
-            border-bottom-left-radius: 30px;
+            
         }
 
 .antartica {
