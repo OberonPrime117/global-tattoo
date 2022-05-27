@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
     <style>
      
       .dropdown {
@@ -59,9 +70,86 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      li {
+      margin: 0%; 
+      padding: 0%;
+    }
+    ul {
+      margin: 0%; 
+      padding: 0%;
+    }
+    
+    
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
       </style>
   </head>
-<body>
+<body id="main">
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a class="hoverb" href="index.html">Home</a>
+    <a class="hoverb" href="academy.html">Tattoo Training Course</a>
+    <a class="hoverb" href="tattoo.html">Tattoo</a>
+    <a class="hoverb" href="#">Piercings</a>
+    <a class="hoverb"
+      href="https://www.google.com/search?q=global+india+tattoo&oq=global+india+tattoo&ie=UTF-8#lrd=0x3be7b98bbf77f645:0x49663e810616cb0d,1,,,">Give
+      Us a Review!</a>
+  </div>
   <header>
     <nav id="header-nav" class="navbar navbar-default" style="background-color: #222;">
       <div class="container">
@@ -79,26 +167,15 @@
            
           </div>
           
-          <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="">
-              <div class="dropdown">
-                <button class="dropbtn"> 
-                  <i class="glyphicon glyphicon-align-justify"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="index.html">Home</a>
-                  <a href="academy.html">Tattoo Training Course</a>
-                  <a href="#">Tattoo</a>
-                  <a href="#">Piercings</a>
-                  <a href="https://www.google.com/search?q=global+india+tattoo&oq=global+india+tattoo&ie=UTF-8#lrd=0x3be7b98bbf77f645:0x49663e810616cb0d,1,,,">Give Us a Review!</a>
-                  
-                </div>
-            </li>
-            <li id="phone" class="hidden-xs">
+          <div id="nav-list" class="nav navbar-nav navbar-right">
+          
+            <div id="phone" class="hidden-xs">
               <a href="tel:+917138336481">
-                <span>+91 71383 36481</span></a><div style="width: -20%;">We will provide an amazing tattoo experience worth your time</div>
-            </li>
-          </ul><!-- .collapse .navbar-collapse -->
+                <span>+91 71383 36481</span></a>
+              <div style="width: -20%;">We will provide an amazing tattoo experience worth your time</div>
+              <button style="margin-top: 20px;" class="openbtn" onclick="openNav()">☰ Open Sidebar</button> 
+              </div>
+          </div>
       </div><!-- .container -->
     </nav><!-- #header-nav -->
   </header>
