@@ -4,12 +4,7 @@ body {
   background-color: #222;
   font-family: 'Oxygen', sans-serif;
 }
-.marquee {
-margin: 0 auto;
-white-space: nowrap;
-overflow: hidden;
-position: absolute;
-}
+
 .dropdown {
   float: left;
   overflow: hidden;
