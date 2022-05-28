@@ -70,14 +70,9 @@ body {
         /* Caption */
         .caption {
             margin: 0;
-            
             width: 100%;
-            
-            overflow:hidden;
             display: block;
-            padding-left: 10px;
-            border-radius: 30px;
-            border: 20px solid white;
+            
             text-align: center;
         }
         .captain {
