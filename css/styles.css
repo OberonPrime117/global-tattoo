@@ -18,7 +18,7 @@ body {
 .image {
   background-color: white;
   border-radius: 30px;
-  border: 20px solid white;
+  border: 15px solid white;
 }
         .image h2 {
             font-size: 16px;
@@ -72,7 +72,7 @@ body {
             margin: 0;
             width: 100%;
             display: block;
-            
+            padding-top: 10px;
             text-align: center;
         }
         .captain {
