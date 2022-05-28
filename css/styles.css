@@ -52,6 +52,7 @@ body {
             width: 100%;
             height: auto;
             margin-bottom: 10px;
+            border-color: white;
             border-top-right-radius: 30px;
             border-top-left-radius: 30px;
             border-bottom-right-radius: 30px;
