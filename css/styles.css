@@ -76,8 +76,8 @@ body {
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
-            border-bottom-right-radius: 30px;
-            border-bottom-left-radius: 30px;
+            border-radius: 30px;
+            border: 10px solid white;
             
         }
         .captain {
