@@ -72,13 +72,13 @@ body {
             margin: 0;
             
             width: 100%;
-            padding-top: 20px;
+            
             overflow:hidden;
             display: block;
             padding-left: 10px;
             border-radius: 30px;
             border: 10px solid white;
-            
+            text-align: center;
         }
         .captain {
           font-size: 170%;
