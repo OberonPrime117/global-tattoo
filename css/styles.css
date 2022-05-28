@@ -75,16 +75,18 @@ body {
         /* Caption */
         .caption {
             margin: 0;
-            
+            padding: 20px;
             width: 100%;
-            
+            padding-top: 20px;
             display: block;
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
+            border-left:10px solid white;
+            border-right:10px solid white;
+            border-bottom: 10px solid white;
             
-            border-bottom-left-radius: 30px white;
-            border-bottom-right-radius: 30px white;
+            border-radius: 20px;
             text-align: center;
             
         }
