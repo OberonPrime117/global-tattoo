@@ -17,6 +17,8 @@ body {
 
 .image {
   background-color: white;
+  border-radius: 30px;
+  border: 10px solid white;
 }
         .image h2 {
             font-size: 16px;
@@ -68,14 +70,12 @@ body {
         /* Caption */
         .caption {
             margin: 0;
-            padding: 20px;
+            
             width: 100%;
             padding-top: 20px;
             overflow:hidden;
             display: block;
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
+            
             border-radius: 30px;
             border: 10px solid white;
             
