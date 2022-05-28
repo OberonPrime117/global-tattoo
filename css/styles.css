@@ -88,7 +88,10 @@ body {
             border-right:10px solid white;
             border-bottom: 10px solid white;
             text-align: center;
-            font-size: 190%;
+            
+        }
+        .captain {
+          font-size: 170%;
         }
 
 .antartica {
