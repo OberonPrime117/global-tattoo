@@ -25,10 +25,6 @@ body {
             min-height:280px;
             max-height:280px;
             
-            
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
         }
         
         .zoom-on-hover {
@@ -75,6 +71,7 @@ body {
             padding: 20px;
             width: 100%;
             padding-top: 20px;
+            overflow:hidden;
             display: block;
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
