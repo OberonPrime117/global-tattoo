@@ -61,12 +61,9 @@ body {
             display: block;
             width: 100%;
             height: auto;
+            border-radius: 30px;
+            border: 10px solid white;
             
-            border-top-right-radius: 30px white;
-            border-top-left-radius: 30px white;
-            border-bottom-right-radius: 30px;
-            border-bottom-left-radius: 30px;
-            border-bottom:10px solid white;
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
