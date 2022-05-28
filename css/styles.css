@@ -22,10 +22,9 @@ body {
         .image img {
             min-height:280px;
             max-height:280px;
-            border-left:10px solid white;
-            border-right:10px solid white;
-            border-top:10px solid white;
             
+            border-top-right-radius: solid white 30px;
+            border-top-left-radius: solid white 30px;
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
