@@ -83,8 +83,8 @@ body {
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
             
-            border-bottom-left-radius: 30px solid white;
-            border-bottom-right-radius: 30px solid white;
+            border-bottom-left-radius: 30px white;
+            border-bottom-right-radius: 30px white;
             text-align: center;
             
         }
