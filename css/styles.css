@@ -64,8 +64,8 @@ body {
             width: 100%;
             height: auto;
             
-            border-top-right-radius: 30px;
-            border-top-left-radius: 30px;
+            border-top-right-radius: 30px solid white;
+            border-top-left-radius: 30px solid white;
             border-bottom-right-radius: 30px;
             border-bottom-left-radius: 30px;
             border-bottom:10px solid white;
