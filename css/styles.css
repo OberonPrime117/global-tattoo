@@ -19,16 +19,7 @@ body {
         .image h2 {
             font-size: 16px;
         }
-        .image img {
-            min-height:280px;
-            max-height:280px;
-            border-left:10px solid white;
-            border-right:10px solid white;
-            border-top:10px solid white;
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
-        }
+        
         
         .zoom-on-hover {
             transition: all 0.5s ease-in-out;
