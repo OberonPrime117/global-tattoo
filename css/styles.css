@@ -17,7 +17,7 @@ body {
 
 .image {
   background-color: white;
-  border-radius: 30px;
+  border-radius: 10px;
   border: 10px solid white;
 }
         .image h2 {
@@ -75,7 +75,7 @@ body {
             padding-top: 20px;
             overflow:hidden;
             display: block;
-            
+            padding-left: 10px;
             border-radius: 30px;
             border: 10px solid white;
             
