@@ -15,7 +15,9 @@ body {
 }
 
 
-
+.image {
+  background-color: white;
+}
         .image h2 {
             font-size: 16px;
         }
@@ -29,7 +31,6 @@ body {
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
             -moz-box-sizing: border-box; /* Firefox, other Gecko */
             box-sizing: border-box; /* Opera/IE 8+ */
-            padding-bottom: 20px;
         }
         
         .zoom-on-hover {
