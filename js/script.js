@@ -108,6 +108,7 @@ $(function () {
 
             finalHtml += "</section>";
             insertHtml("#main-content", finalHtml);
+            insertHtml("#main-kontent", finalHtml);
           },
           false
         );
