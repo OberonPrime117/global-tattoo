@@ -175,15 +175,25 @@ $(function () {
       buildAndShowMenuItemsHTML
     );
   };
-
-  dc.loadMenuItems = document.addEventListener("DOMContentLoaded",function (categoryShort,event) {
+  /*dc.loadMenuItems = function (categoryShort) {
     showLoading("#main-kontent");
     categoryName = categoryShort;
     $ajaxUtils.sendGetRequest(
       menupierceUrl + categoryShort + ".json",
       buildAndShowPierceItemsHTML
     );
+  };*/
+  document.addEventListener("DOMContentLoaded", dc.loadMenuItems = function (event,categoryShort) {
+    showLoading("#main-kontent");
+    categoryName = categoryShort;
+    $ajaxUtils.sendGetRequest(
+      menupierceUrl + categoryShort + ".json",
+      buildAndShowPierceItemsHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+      
+    ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
+
+  
 
   // Builds HTML for the categories page based on the data
   // from the server
