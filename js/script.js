@@ -79,6 +79,14 @@ $(function () {
       true
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
+  document.addEventListener("DOMContentLoaded", function (event) {
+    showLoading("#main-kontent");
+    $ajaxUtils.sendGetRequest(
+      allCategoriesUrl,
+      buildAndShowPierceHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+      true
+    ); // Explicitely setting the flag to get JSON from server processed into an object literal
+  });
   
   // *** finish **
 
@@ -108,6 +116,39 @@ $(function () {
 
             finalHtml += "</section>";
             insertHtml("#main-content", finalHtml);
+            
+          },
+          false
+        );
+      },
+      false
+    ); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+  }
+
+  function buildAndShowPierceHTML(categories) {
+    $ajaxUtils.sendGetRequest(
+      categoriesTitleHtml,
+      function (categoriesTitleHtml) {
+        // Load home snippet page
+        $ajaxUtils.sendGetRequest(
+          pierceItemHtml,
+          function (pierceItemHtml) {
+            var finalHtml = categoriesTitleHtml;
+            finalHtml += "<section class='row'>";
+
+            // Loop over categories
+            for (var i = 0; i < categories.length; i++) {
+              // Insert category values
+              var html = pierceItemHtml;
+              var name = "" + categories[i].name;
+              var short_name = categories[i].short_name;
+              html = insertProperty(html, "name", name);
+              html = insertProperty(html, "short_name", short_name);
+              finalHtml += html;
+            }
+
+            finalHtml += "</section>";
+            insertHtml("#main-kontent", finalHtml);
             
           },
           false
