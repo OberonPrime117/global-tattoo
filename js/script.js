@@ -176,14 +176,14 @@ $(function () {
     );
   };
 
-  dc.loadMenuItems = function (categoryShort) {
+  dc.loadMenuItems = document.addEventListener("DOMContentLoaded",function (categoryShort,event) {
     showLoading("#main-kontent");
     categoryName = categoryShort;
     $ajaxUtils.sendGetRequest(
       menupierceUrl + categoryShort + ".json",
       buildAndShowPierceItemsHTML
     );
-  };
+  });
 
   // Builds HTML for the categories page based on the data
   // from the server
