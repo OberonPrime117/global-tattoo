@@ -79,6 +79,14 @@ $(function () {
       true
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
+  document.addEventListener("DOMContentLoaded", function (event) {
+    showLoading("#main-kontent");
+    $ajaxUtils.sendGetRequest(
+      allCategoriesUrl,
+      buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+      true
+    ); // Explicitely setting the flag to get JSON from server processed into an object literal
+  });
   // *** finish **
 
   // Builds HTML for the home page based on categories array
@@ -295,28 +303,24 @@ $(function () {
   function buildPierceItemsViewHtml(
     categoryMenuItems,
     menuItemsTitleHtml,
-    menuItemHtml
+    pierceItemHtml
   ) {
     menuItemsTitleHtml = insertProperty(
       menuItemsTitleHtml,
       "name",
       categoryMenuItems.category_name
     );
-    /* menuItemsTitleHtml =
-insertProperty(menuItemsTitleHtml,
-"special_instructions",
-categoryMenuItems.category.special_instructions);
-*/
+    
     var finalHtml = menuItemsTitleHtml;
     finalHtml += "<section class='row'>";
 
-    // Loop over menu items
+   
     var menuItems = categoryMenuItems.menu_items;
-    //var catShortName = categoryMenuItems.category_name;
+    
     for (var i = 0; i < menuItems.length; i++) {
-      // Insert menu item values
+      
 
-      var html = menuItemHtml;
+      var html = pierceItemHtml;
       html = insertProperty(html, "short_name", menuItems[i].short_name);
       html = insertProperty(html, "category_name", categoryName);
       html = insertItemPrice(html, "price_small", menuItems[i].price);
