@@ -79,6 +79,7 @@ $(function () {
       true
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
+  /*
   document.addEventListener("DOMContentLoaded", function (event) {
     showLoading("#main-kontent");
     $ajaxUtils.sendGetRequest(
@@ -87,7 +88,7 @@ $(function () {
       true
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
-  
+  */
   // *** finish **
 
   // Builds HTML for the home page based on categories array
