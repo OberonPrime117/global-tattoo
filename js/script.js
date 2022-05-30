@@ -138,7 +138,7 @@ $(function () {
             finalHtml += "<section class='row'>";
             
             // Loop over categories
-            for (var i = 0; i < 28; i++) {
+            for (var i = 0; i < categories.length; i++) {
               // Insert category values
               var html = pierceItemHtml;
               var name = "" + categories[i].name;
