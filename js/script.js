@@ -330,12 +330,12 @@ $(function () {
       // Insert menu item values
 
       var html = menuItemHtml;
-      html = insertProperty(html, "short_name", menuItems[i].short_name);
+      /*html = insertProperty(html, "short_name", menuItems[i].short_name);
       html = insertProperty(html, "category_name", categoryName);
       html = insertItemPrice(html, "price_small", menuItems[i].price);
       html = insertProperty(html, "name", menuItems[i].name);
       html = insertProperty(html, "description", menuItems[i].description);
-
+      */
       // Add clearfix after every second menu item
 
       finalHtml += html;
