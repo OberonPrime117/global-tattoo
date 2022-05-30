@@ -79,16 +79,15 @@ $(function () {
       true
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
-  /*
+  
   document.addEventListener("DOMContentLoaded", function (event) {
     showLoading("#main-kontent");
     $ajaxUtils.sendGetRequest(
-      allCategoriesUrl,
-      buildAndShowPierceHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
-      true
+      menupierceUrl + categoryShort + ".json",
+      buildAndShowPierceItemsHTML // ***** <---- TODO: STEP 1: Substitute [...] ******
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
   });
-  */
+  
   // *** finish **
 
   // Builds HTML for the home page based on categories array
@@ -168,22 +167,23 @@ $(function () {
   // THIS IS THE LINE YOU EDITED
   // Load the menu items view
   // 'categoryShort' is a short_name for a category
-  dc.loadMenuItems = function (categoryShort) {
+ dc.loadMenuItems = function (categoryShort) {
     showLoading("#main-content");
     categoryName = categoryShort;
     $ajaxUtils.sendGetRequest(
       menuItemsUrl + categoryShort + ".json",
       buildAndShowMenuItemsHTML
     );
-  };
-  /*dc.loadMenuItems = function (categoryShort) {
+  }; 
+  /*
+  dc.loadMenuItems = function (categoryShort) {
     showLoading("#main-kontent");
     categoryName = categoryShort;
     $ajaxUtils.sendGetRequest(
       menupierceUrl + categoryShort + ".json",
       buildAndShowPierceItemsHTML
     );
-  };*/
+  };
   document.addEventListener("DOMContentLoaded", dc.loadMenuItems = function (event,categoryShort) {
     showLoading("#main-kontent");
     categoryName = categoryShort;
@@ -192,7 +192,7 @@ $(function () {
       buildAndShowPierceItemsHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
       
     ); // Explicitely setting the flag to get JSON from server processed into an object literal
-  });
+  });*/
 
   
 
