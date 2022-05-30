@@ -174,7 +174,8 @@ $(function () {
       menuItemsUrl + categoryShort + ".json",
       buildAndShowMenuItemsHTML
     );
-  }; 
+  };
+  
   /*
   dc.loadMenuItems = function (categoryShort) {
     showLoading("#main-kontent");
@@ -330,12 +331,11 @@ $(function () {
       // Insert menu item values
 
       var html = menuItemHtml;
-      /*html = insertProperty(html, "short_name", menuItems[i].short_name);
+      html = insertProperty(html, "short_name", menuItems[i].short_name);
       html = insertProperty(html, "category_name", categoryName);
-      html = insertItemPrice(html, "price_small", menuItems[i].price);
       html = insertProperty(html, "name", menuItems[i].name);
-      html = insertProperty(html, "description", menuItems[i].description);
-      */
+      
+      
       // Add clearfix after every second menu item
 
       finalHtml += html;
@@ -351,11 +351,11 @@ $(function () {
     menuItemsTitleHtml,
     pierceItemHtml
   ) {
-    /*menuItemsTitleHtml = insertProperty(
+    menuItemsTitleHtml = insertProperty(
       menuItemsTitleHtml,
       "name",
       categoryMenuItems.category_name
-    );*/
+    );
     
     var finalHtml = menuItemsTitleHtml;
     finalHtml += "<section class='row'>";
@@ -369,9 +369,6 @@ $(function () {
       var html = pierceItemHtml;
       html = insertProperty(html, "short_name", menuItems[i].short_name);
       html = insertProperty(html, "category_name", categoryName);
-      html = insertItemPrice(html, "price_small", menuItems[i].price);
-      html = insertProperty(html, "name", menuItems[i].name);
-      html = insertProperty(html, "description", menuItems[i].description);
 
       // Add clearfix after every second menu item
 
