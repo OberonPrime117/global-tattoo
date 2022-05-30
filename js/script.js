@@ -19,7 +19,7 @@ $(function () {
   var categoriesTitleHtml = "snippets/categories-title-snippet.html";
   var categoryHtml = "snippets/category-snippet.html";
   var menuItemsUrl = "https://oberonprime117.github.io/json/menu_items/";
-  var menupierceUrl = "https://oberonprime117.github.io/json/piercings/";
+  var menupierceUrl = "https://oberonprime117.github.io/json/piercing.json";
   var menuItemsTitleHtml = "snippets/menu-items-title.html";
   var menuItemHtml = "snippets/menu-item.html";
   var pierceItemHtml = "snippets/pierce-menu.html";
@@ -247,7 +247,7 @@ $(function () {
     );
   }
 
-  function buildAndShowPierceItemsHTML(categoryMenuItems) {
+  /*function buildAndShowPierceItemsHTML(categoryMenuItems) {
     // Load title snippet of menu items page
     $ajaxUtils.sendGetRequest(
       menuItemsTitleHtml,
@@ -271,7 +271,7 @@ $(function () {
       },
       false
     );
-  }
+  }*/
 
   // Using category and menu items data and snippets html
   // build menu items view HTML to be inserted into page
@@ -315,7 +315,7 @@ $(function () {
   }
 
   // PIERCE STARTS
-  function buildPierceItemsViewHtml(
+  /*function buildPierceItemsViewHtml(
     categoryMenuItems,
     menuItemsTitleHtml,
     pierceItemHtml
@@ -346,7 +346,7 @@ $(function () {
 
     finalHtml += "</section>";
     return finalHtml;
-  }
+  }*/
   // PIERCE ENDS
 
   // Appends price with '$' if price exists
