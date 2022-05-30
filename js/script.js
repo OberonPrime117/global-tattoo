@@ -351,17 +351,17 @@ $(function () {
     menuItemsTitleHtml,
     pierceItemHtml
   ) {
-    menuItemsTitleHtml = insertProperty(
+    /*menuItemsTitleHtml = insertProperty(
       menuItemsTitleHtml,
       "name",
       categoryMenuItems.category_name
-    );
+    );*/
     
     var finalHtml = menuItemsTitleHtml;
     finalHtml += "<section class='row'>";
 
    
-    var menuItems = categoryMenuItems.menu_items;
+     var menuItems = categoryMenuItems.menu_items;
     
     for (var i = 0; i < menuItems.length; i++) {
       
