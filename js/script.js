@@ -363,7 +363,7 @@ $(function () {
    
      var menuItems = categoryMenuItems.menu_items;
     
-    for (var i = 0; i < menuItems.length; i++) {
+    for (var i = 0; i < 28; i++) {
       
 
       var html = pierceItemHtml;
