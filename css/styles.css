@@ -28,7 +28,11 @@ body {
             max-height:280px;
             
         }
-        
+        .image imz {
+          min-height:330px;
+          max-height:330px;
+          
+      }
         .zoom-on-hover {
             transition: all 0.5s ease-in-out;
             -webkit-transition: all 0.5s ease-in-out;
