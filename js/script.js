@@ -22,6 +22,7 @@ $(function () {
   var menupierceUrl = "https://oberonprime117.github.io/json/piercing.json";
   var menuItemsTitleHtml = "snippets/menu-items-title.html";
   var menuItemHtml = "snippets/menu-item.html";
+  var pierceTitleHtml = "snippets/piercings-title-snippet.html"
   var pierceItemHtml = "snippets/pierce-menu.html";
 
   var categoryName;
@@ -128,13 +129,13 @@ $(function () {
 
   function buildAndShowPierceHTML(categories) {
     $ajaxUtils.sendGetRequest(
-      categoriesTitleHtml,
-      function (categoriesTitleHtml) {
+      pierceTitleHtml,
+      function (pierceTitleHtml) {
         // Load home snippet page
         $ajaxUtils.sendGetRequest(
           pierceItemHtml,
           function (pierceItemHtml) {
-            var finalHtml = categoriesTitleHtml;
+            var finalHtml = pierceTitleHtml;
             finalHtml += "<section class='row'>";
             
             // Loop over categories
