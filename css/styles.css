@@ -353,7 +353,7 @@ h3.menu-item-title {
 }
 
 /********** Extra small devices only **********/
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-width:479px ) {
   /* Header */
   .navbar-brand {
     padding-top: 10px;
@@ -441,6 +441,13 @@ h3.menu-item-title {
   .navbar-brand h1 { /* Restaurant name */
     padding-top: 10px;
     font-size: 6vw;
+  }
+  .container .jumbotron {
+    margin-top: 30px;
+    background: url('../images/jumbotron_439.jpg') no-repeat;
+    height: 302px;
+    width:300px;
+    padding: 0;
   }
   /* End Header */
   

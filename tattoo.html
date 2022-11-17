@@ -12,7 +12,7 @@
     <script>
       function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("main").style.marginLeft = "500px";
       }
       
       function closeNav() {
@@ -21,7 +21,83 @@
       }
       </script>
     <style>
-     
+      body {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 24px;
+      }
+    #level-gnav ul{
+   padding-left:0;
+}
+
+#menu-btn{
+  color:#fff;
+  display:none;
+}
+
+.level-1{
+  display:flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  max-width:1200px;
+  justify-content: center; 
+}
+
+.level-1 li{
+  list-style: none;
+  position:relative;
+}
+
+#level-gnav a{
+  color:#fff;
+  text-decoration: none;
+  display:block;
+  padding:15px 18px;
+  font-size:24px;
+}
+
+#level-gnav a:hover{
+  color: rgb(154, 154, 154);
+}
+
+
+.level-2{
+  position:absolute;
+  background:#333;
+  top:100%;
+  left:0;
+  display:none;
+  z-index: 2;
+  width:100%;
+}
+
+
+@media(max-width:960px){
+  
+  #menu-btn{
+    display:block;
+    padding-left:10%;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+  }
+
+  .level-1{
+ 
+  }
+
+  .level-2{
+    position:static;
+  }
+
+  #level-gnav a{
+    text-align:left;
+  }
+
+  #level-gnav .level-2 li a{
+    padding-left:35px;
+  }
+
+}
       .dropdown {
         float: left;
         overflow: visible;
@@ -30,7 +106,7 @@
       }
       
       .dropdown .dropbtn {
-        font-size: 16px;  
+        font-size: 20px;  
         border: none;
         outline: none;
         color: white;
@@ -78,9 +154,39 @@
       margin: 0%; 
       padding: 0%;
     }
-    
-    
-.sidebar {
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.addme {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .closebtn {
+  display: none;
+  visibility: hidden;
+}
+.openbtn {
+  display: none;
+}
+}
+.closebtn {
+  margin-bottom: 50px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 500px) {
+  img {
+    display : none;
+  }
+  .addme {
+  display: unset;
+}
+  li {
+    margin-left: 40%;
+    margin-right: 30%
+  }
+  .sidebar {
   height: 100%;
   width: 0;
   position: fixed;
@@ -90,7 +196,7 @@
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 15px;
 }
 
 .sidebar a {
@@ -98,7 +204,7 @@
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: block;
+  display: block; 
   transition: 0.3s;
 }
 
@@ -106,12 +212,15 @@
   color: #f1f1f1;
 }
 
-.sidebar .closebtn {
+.closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+.special {
+  margin-top:25%;
 }
 
 .openbtn {
@@ -126,54 +235,38 @@
 .openbtn:hover {
   background-color: #444;
 }
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
       </style>
   </head>
 <body id="main">
-  <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a class="hoverb" href="index.html">Home</a>
-    <a class="hoverb" href="tattoo-training-course.html">Tattoo Training Course</a>
-    <a class="hoverb" href="tattoo.html">Tattoo</a>
-    <a class="hoverb" href="piercings.html">Piercings</a>
-    <a class="hoverb"
-      href="https://www.google.com/search?q=global+india+tattoo&oq=global+india+tattoo&ie=UTF-8#lrd=0x3be7b98bbf77f645:0x49663e810616cb0d,1,,,">Give
-      Us a Review!</a>
-  </div>
+  <img class="addme" style="width: 150px; height: 150px;" src="images/studio.png" alt="">
   <header>
     <nav id="header-nav" class="navbar navbar-default" style="background-color: #222;">
+      <div id="level-gnav">
+        <div id="menu-btn">
+          <i class="blogicon-reorder"></i> 
+        </div>
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" style="font-size: 36;" class="closebtn" onclick="closeNav()">X<br></a>
+    <ul class=" level-1 menu-inner">
+          
+          <li class="special"><a  href="tattoo.html">Tattoo</a></li>
+          <li ><a  href="piercings.html">Piercings</a></li>
+          <li class="removeme"><img class="removeme" style="width: 150px; height: 150px;" src="images/studio.png" alt=""></li>
+          <li ><a href="tattoo-training-course.html">Tattoo Training Course</a></li>
+          <li><a href="https://www.google.com/search?q=global+india+tattoo&oq=global+india+tattoo&ie=UTF-8#lrd=0x3be7b98bbf77f645:0x49663e810616cb0d,1,,,">Give Us a Review!</a></li>
+        </ul></div>
+  </div>
+  
       <div class="container">
-        <div class="navbar-header">
-          <a href="index.html">
-            <div style=" width: 150px;
-            height: 150px; padding-top:10px;
-            " alt="Logo image"> 
-            <img style="width: 150px; 
-  height: 150px;" src="images/studio.png" alt=""> 
-           </div>
-          
-          <div class="navbar-brand">
-            <h1 style="color: white;">Global Tattoo India</h1></div></a>
-           
-          </div>
-          
           <div id="nav-list" class="nav navbar-nav navbar-right">
-          
-            <div id="phone" class="hidden-xs">
+            <div id="phone" class="col-sm-12">
               <a href="tel:+917138336481">
-                <span>+91 71383 36481</span></a>
-              <div style="width: -20%;">We will provide an amazing tattoo experience worth your time</div>
-            </div><button style="margin-top: 20px;" class="openbtn" onclick="openNav()">☰ Open Sidebar</button> 
+                <span  style="font-size: 130%;"> Contact Us : +91 71383 36481</span></a>
+              <div  class="hidden-xs" style="width: -20%;">We will provide an amazing tattoo experience worth your time</div>
+            </div> 
+            <button style="margin-top: 20px;" class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
               
           </div>
       </div><!-- .container -->
